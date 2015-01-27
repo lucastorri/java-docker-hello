@@ -10,4 +10,4 @@ build: clean
 	mkdir ${SCRIPT_DIR}/out
 	javac -d ${SCRIPT_DIR}/out ${SCRIPT_DIR}/src/Main.java
 	cp ${SCRIPT_DIR}/Dockerfile ${SCRIPT_DIR}/out
-	docker build -t hello-java ${SCRIPT_DIR}/out
+	docker build -t hello-java:${shell date '+%Y%m%d%H%M%S'} ${SCRIPT_DIR}/out
